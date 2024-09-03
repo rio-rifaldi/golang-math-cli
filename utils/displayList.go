@@ -1,15 +1,18 @@
 package utils
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/fatih/color"
+)
 
 
 var Shapes = [5]string{"rectangle","square","circle","trapezoid","triangle"}
 
 
 func DisplayList(){
-
-	fmt.Print("\n\t\tMATH COUNTER\n\n");
-	
+	c := color.New(color.FgCyan).Add(color.Bold)
+	c.Print("\n --------- MATH COUNTER --------\n\n",)	
 	for index,val := range Shapes{
 		fmt.Printf("%v) %v \n",string('a' + index),val)	
 	}

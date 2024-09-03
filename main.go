@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"go-cli-app/shapes"
 	"go-cli-app/utils"
-	"log"
 	"os"
 	"regexp"
 )
@@ -23,15 +22,17 @@ func main() {
 	fmt.Scan(&value)
 	reader := bufio.NewReader(os.Stdin)
 
-	matcher := regexp.MustCompile(`^[a-f]{1}$|^q{1}$`)
+	matcher := regexp.MustCompile(`^[a-e]{1}$|^q{1}$`)
 	isMatch := matcher.MatchString(value)
 
+	
 	if !isMatch {
-		log.Println("please input corrently")
+		utils.Error("Please input corrently !!")
 		goto top
 	}
 	if(value == "q"){
-		fmt.Println("thank you for using us");
+		utils.ClearScreen()
+		utils.Success("Thank you for using us :)")
 		os.Exit(1)
 	}
 

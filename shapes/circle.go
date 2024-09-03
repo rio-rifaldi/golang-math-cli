@@ -25,7 +25,7 @@ func Circle(reader *bufio.Reader) {
 		fmt.Println("area : ", area );
 	
 
-		fmt.Println("\nwe will redirect you to main menu soon ....");
+		utils.Notif("\nwe will redirect you to main menu soon ....");
 		
 		time.Sleep(time.Millisecond * 4000)
 }

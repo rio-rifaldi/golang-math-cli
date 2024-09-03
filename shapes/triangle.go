@@ -27,7 +27,7 @@ func Triangle(reader *bufio.Reader) {
 	
 		fmt.Println("hypotenuse : ", hypotenuse);
 
-		fmt.Println("\nwe will redirect you to main menu soon ....");
+		utils.Notif("\nwe will redirect you to main menu soon ....");
 		
 		time.Sleep(time.Millisecond * 4000)
 }

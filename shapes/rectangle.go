@@ -27,7 +27,7 @@ func Rectangle(reader *bufio.Reader) {
 		fmt.Println("diagonal count : ", 2 );
 		fmt.Println("diagonal width (hypotenuse) : ", hypotenuse);
 
-		fmt.Println("\nwe will redirect you to main menu soon ....");
+		utils.Notif("\nwe will redirect you to main menu soon ....");
 		
 		time.Sleep(time.Millisecond * 4000)
 }

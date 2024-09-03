@@ -21,7 +21,7 @@ func Trapezoid(reader *bufio.Reader) {
 		if err != nil {goto topA}
 
 		if(lineTwo < lineOne){
-			fmt.Println("\nparallel line two must be bigger than parallel line one");
+			utils.Error("\nparallel line two must be bigger than parallel line one");
 			goto topA
 			
 		}
@@ -39,7 +39,7 @@ func Trapezoid(reader *bufio.Reader) {
 		fmt.Println("diagonal width (hypotenuse) : ", hypotenuse);
 	
 
-		fmt.Println("\nwe will redirect you to main menu soon ....");
+		utils.Notif("\nwe will redirect you to main menu soon ....");
 		
 		time.Sleep(time.Millisecond * 4000)
 }
